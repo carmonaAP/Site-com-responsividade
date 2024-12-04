@@ -1,0 +1,228 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo geral */
+  body {
+    background-image: url('https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/1049x590/quality/80/https://s.aolcdn.com/os/ab/_cms/2019/11/06030705/b-is-for-build-v8-tt-huracan-sema-11.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  /* Estilo do menu principal */
+nav {
+  background-color: #000000;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #0022ff;
+}
+
+.btn-login {
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  background-color: #002fff;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 160px;
+  padding: 0;
+}
+
+nav ul li .dropdown-content li a {
+  padding: 10px 15px;
+}
+
+nav ul li:hover .dropdown-content {
+  display: block;
+}
+
+/* Menu hamburguer para telas menores */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      background-color: #000000;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle:checked + .menu-icon + ul {
+      display: flex;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  nav ul li a {
+      font-size: 18px;
+  }
+
+  .btn-login {
+      font-size: 16px;
+  }
+}
+
+ 
+
+
+
+  
+  /* Carrinho */
+  .carrinho-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .carrinho-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #002fff;
+  }
+  
+  .carrinho-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .carrinho-tabela th, .carrinho-tabela td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .carrinho-tabela th {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  td{
+    color: #ddd;
+  }
+  
+  .carrinho-tabela td button {
+    padding: 5px 10px;
+    background-color: #ff3333;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .carrinho-tabela td button:hover {
+    background-color: #ff6666;
+  }
+  
+  .total-label {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+  }
+  
+  .total-value  {
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .checkout-btn {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #ffdd33;
+  }
+  
+  /* Footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+
+  }
+  
+  footer .social a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  footer .social a:hover {
+    color: #fff;
+  }
+  
